@@ -14,7 +14,7 @@ If you are unsure of the URL or command to clone, please click on the Clone butt
 ## To Run Locally firts time ##
 You need to install node and npm node.js
 
-Install bower globaly
+Install bower globally
 ```
 $ npm install -g bower
 ```
