@@ -11,7 +11,7 @@ git clone https://github.com/camorenoa/movieSearch.git
 ```
 If you are unsure of the URL or command to clone, please click on the Clone button "HTTPS clone URL".
 
-## To Run Locally firts time ##
+## To Run Locally first time ##
 You need to install node and npm node.js
 
 Install bower globally
@@ -24,6 +24,17 @@ Install local packages
 cd /your/local/path/
 sudo npm install
 bower install
+```
+
+Run a simple server
+```
+cd /your/local/path/
+node server.js
+```
+
+URL
+```
+http://localhost:8080/
 ```
 
 ## To Run Locally from the second time onwards ##
