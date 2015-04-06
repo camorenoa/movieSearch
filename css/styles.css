@@ -1,0 +1,115 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700);
+/* Fonts */
+/* Colors */
+/* General styles */
+body {
+  font-family: 'PT Sans Narrow', sans-serif;
+  background: #f2f3f5;
+}
+.load-more-icon {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.no-more-results {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.clickable {
+  cursor: pointer;
+}
+/* Cards */
+.results-cards .thumbnail {
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  background-image: -webkit-linear-gradient(top, #ffffff 0%, #ecebf1 100%);
+  background-image: -o-linear-gradient(top, #ffffff 0%, #ecebf1 100%);
+  background-image: linear-gradient(to bottom, #ffffff 0%, #ecebf1 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffecebf1', GradientType=0);
+  -webkit-box-shadow: 0px 10px 40px -15px #333333;
+  -moz-box-shadow: 0px 10px 40px -15px #333333;
+  box-shadow: 0px 10px 40px -15px #333333;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 30px;
+}
+.results-cards .thumbnail .image {
+  height: 192px;
+}
+.results-cards .thumbnail .image .default-image {
+  padding-top: 50px;
+}
+.results-cards .thumbnail .caption {
+  position: relative;
+  display: block;
+  z-index: 2;
+  margin: 0 -4px -4px;
+}
+.results-cards .thumbnail .caption h3 {
+  text-transform: uppercase;
+  margin: 0;
+  text-align: left;
+  color: #a9b2c3;
+  font-size: 18px;
+  text-overflow: ellipsis;
+  width: 100%;
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+}
+:hover.results-cards .thumbnail .caption {
+  background: #1492e9;
+  background-image: -webkit-radial-gradient(circle, #41a8ef, #1492e9);
+  background-image: radial-gradient(circle, #41a8ef, #1492e9);
+  background-repeat: no-repeat;
+}
+:hover.results-cards .thumbnail .caption h3 {
+  color: #fff;
+}
+.results-cards .thumbnail .item-data {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  color: #fff;
+  padding: 10px;
+}
+:hover.results-cards .thumbnail .item-data {
+  display: block;
+}
+.results-cards .thumbnail .item-data h4 {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.results-cards .thumbnail .item-data h4 small {
+  color: #ccc;
+}
+.results-cards .thumbnail .item-data h5 {
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding-left: 5px;
+}
+.results-cards .thumbnail .item-data .cast {
+  padding-left: 15px;
+}
+.results-cards .thumbnail .item-data .rating {
+  position: absolute;
+  bottom: 40px;
+  right: 10px;
+}
