@@ -33,18 +33,22 @@
       noPage = 1;
       $scope.searchResults = [];
       $scope.noMoreResults = null;
+      $scope.noResults = false;
       searchService.doSearch(newValue, noPage)
         .then(function (response) {
-          console.log('response', response );
+          
           totalPages = response.data.total_pages;
           $scope.results = response.data.results;
-          console.log('results.backdrop_path', $scope.results);
+          
           for (var i = 0; i < $scope.results.length; i++) {
             if($scope.results[i].media_type != 'person') {
               $scope.searchResults.push($scope.results[i]);           
             }
           }
+          
+          $scope.noResults = ($scope.searchResults.length === 0)? true : false;
           noPage += 1;
+          
         }, function (error) {
           console.error(error);
         });
