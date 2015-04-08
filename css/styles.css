@@ -6,6 +6,12 @@ body {
   font-family: 'PT Sans Narrow', sans-serif;
   background: #f2f3f5;
 }
+.navbar-default {
+  background-color: transparent;
+}
+.navbar-default .navbar-brand {
+  font-size: 30px;
+}
 .load-more-icon {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -112,4 +118,77 @@ body {
   position: absolute;
   bottom: 40px;
   right: 10px;
+}
+.episode-items {
+  border-bottom: 1px solid #ddd;
+}
+.episode-items .episode-title {
+  padding: 12px 15px;
+  border-bottom: 1px solid transparent;
+  text-transform: uppercase;
+}
+.episode-items .episode-title.clickable:hover,
+.episode-items .episode-title.clickable.active {
+  background: #e7e7e7;
+  border-bottom: 1px solid #ddd;
+}
+.episode-items .episode-description {
+  padding: 10px 15px;
+  color: #808080;
+}
+.card-container {
+  position: relative;
+  margin: 10px auto;
+  width: 100%;
+  z-index: 1;
+}
+.card-container .caption {
+  display: block;
+  z-index: 2;
+  margin: 0;
+  padding: 9px;
+  background-image: -webkit-radial-gradient(circle, #41a8ef, #1492e9);
+  background-image: radial-gradient(circle, #41a8ef, #1492e9);
+  background-repeat: no-repeat;
+}
+.card-container .caption h3 {
+  text-transform: uppercase;
+  margin: 0;
+  text-align: left;
+  color: #fff;
+  font-size: 18px;
+  text-overflow: ellipsis;
+  width: 100%;
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+}
+.card-container .card-flip {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 1.0s linear;
+}
+.card-container:hover .card-flip {
+  transform: rotateY(180deg);
+  box-shadow: -5px 5px 5px #aaaaaa;
+}
+.card-container .face {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.card-container .face.card-back {
+  display: block;
+  position: absolute;
+  top: 0;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  background-color: #aaa;
+}
+.card-container .face.card-front .img-responsive {
+  margin: 0 auto;
 }

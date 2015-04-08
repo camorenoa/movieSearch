@@ -1,28 +1,32 @@
 <div class="row">
   <div class="col-md-4">
-    <img ng-src="{{configImages.base_url}}{{configImages.poster_sizes[3]}}{{results.poster_path}}" class="img-responsive" ng-if="results.poster_path">
-    <img ng-src="{{configImages.base_url}}{{configImages.poster_sizes[3]}}{{results.backdrop_path}}" class="img-responsive" ng-if="!results.poster_path">
-    <h3>{{results.name}}</h3>
+    <div class="card-container">
+      <div class="card-flip">
+        <div class="face card-front">
+          <img ng-src="{{configImages.base_url}}{{configImages.poster_sizes[3]}}{{results.poster_path}}" class="img-responsive" ng-if="results.poster_path">
+          <img ng-src="{{configImages.base_url}}{{configImages.poster_sizes[3]}}{{results.backdrop_path}}" class="img-responsive" ng-if="!results.poster_path">
+          <div class="caption">
+            <h3>{{results.name}}</h3>
+          </div>
+        </div>
+        <div class="face card-back">
+          <p>{{results.overview}}</p>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="col-md-8">
     <tabset>
       <tab ng-repeat="season in seasonsResults" heading="{{season.season_number}}">
-        <div ng-repeat="episode in season.episodes">
-          <div ng-click="isCollapsed[episode.episode_number] = !isCollapsed[episode.episode_number]" class="clickable">
+        <div ng-repeat="episode in season.episodes" class="episode-items">
+          <div ng-click="isCollapsed[episode.episode_number] = !isCollapsed[episode.episode_number]" class="episode-title" ng-class="{'active': isCollapsed[episode.episode_number], 'clickable': episode.overview}">
             {{episode.episode_number}} {{episode.name}}
           </div>
-          <div collapse="!isCollapsed[episode.episode_number]">
+          <div collapse="!isCollapsed[episode.episode_number]" class="episode-description" ng-if="episode.overview">
             {{episode.overview}}
           </div>
         </div>
-        total espisodes {{}}
       </tab>
     </tabset>
   </div>
 </div>
-
-
-
-
-<!-- <pre>{{results | json }}</pre> -->
-<!-- <pre>{{seasonsResults | json }}</pre> -->
