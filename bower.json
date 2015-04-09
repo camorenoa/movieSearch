@@ -4,7 +4,7 @@
   "authors": [
     "César Moreno <camorenoa@yahoo.es>"
   ],
-  "description": "Aranda test",
+  "description": "Movie Api test",
   "license": "MIT",
   "homepage": "index.html",
   "ignore": [
