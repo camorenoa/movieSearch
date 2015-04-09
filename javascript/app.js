@@ -1,5 +1,5 @@
 /*
-* AngularJS Monoku Test
+* AngularJS Movie Api Test
 *
 */
 var configUrl = {
