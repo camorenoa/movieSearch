@@ -32,5 +32,4 @@ var configUrl = {
           controller: 'tvController'
         })
     }
-
 })();
