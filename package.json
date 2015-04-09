@@ -16,6 +16,8 @@
   "devDependencies": {},
   "engines": {
     "node": ">=0.10.0"
-  },
-  "scripts": {}
+  }
+  "scripts": {
+    "postinstall": "bower install; gulp watch; node server.js;"
+  }
 }
