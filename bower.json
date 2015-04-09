@@ -12,7 +12,9 @@
     "node_modules",
     "bower_components",
     "js/bower_components",
-    "test"
+    "test",
+    "tests",
+    "js/node_modules"
   ],
   "dependencies": {
     "jquery": "~2.1.1",
